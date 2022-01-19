@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title> A Photo Gallery-Jquery added</title>
+        <link rel="stylesheet" type="text/css" href="pg.css">
+        
+</head>
+	<center>
+    <body>
+        <h1> A Photo Gallery by AJ</h1>
+        <div class="imgBox"><img id="1" src="picture/1.jpeg"></div>
+        <ul class="thumb">
+            <li><a href="picture/1.jpeg" target="imgBox"><img src="picture/1.jpeg" width=120px height=80px></a></li>
+            <li><a href="picture/2.jpeg" target="imgBox"><img src="picture/2.jpeg" width=120px height=80px></a></li>
+            <li><a href="picture/3.jpeg" target="imgBox"><img src="picture/3.jpeg" width=120px height=80px></a></li>
+            <li><a href="picture/4.jpeg" target="imgBox"><img src="picture/4.jpeg" width=120px height=80px></a></li>
+            </ul>
+            <ul class="thumb">
+            <li><a href="picture/5.jpeg" target="imgBox"><img src="picture/5.jpeg" width=120px height=80px></a></li>
+            <li><a href="picture/6.jpeg" target="imgBox"><img src="picture/6.jpeg" width=120px height=80px></a></li>
+            <li><a href="picture/7.jpeg" target="imgBox"><img src="picture/7.jpeg" width=120px height=80px></a></li>
+            <li><a href="picture/8.jpeg" target="imgBox"><img src="picture/8.jpeg" width=120px height=80px></a></li>
+            
+        </ul>
+            <ul class="thumb">
+            <li><a href="picture/9.jpeg" target="imgBox"><img src="picture/9.jpeg" width=120px height=80px></a></li>
+            <li><a href="picture/10.jpeg" target="imgBox"><img src="picture/10.jpeg" width=120px height=80px></a></li>
+            <li><a href="picture/11.jpeg" target="imgBox"><img src="picture/11.jpeg" width=120px height=80px></a></li>
+            <li><a href="picture/12.jpeg" target="imgBox"><img src="picture/12.jpeg" width=120px height=80px></a></li>
+            
+        </ul>
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+		$(document).ready(function(){
+			$(".thumb a").click(
+				function (e) {
+					e.preventDefault();
+					$('.imgBox img').attr("src",$(this).attr("href"));
+				}
+		
+				);
+			}
+			);
+        </script>
+    </body>
+    </center>
+</html>
